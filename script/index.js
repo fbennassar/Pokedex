@@ -26,9 +26,9 @@ function getPokemon() {
             <tr>
                 <td><img src="${response.data.sprites.front_default}" alt="${response.data.name}"></td>
                 <td>${name}</td>
-                <td>${types}</td>
+                <td><span class="badge rounded-pill text-bg-primary" id="${response.data.types[0].type.name}">${types}</span></td>
                 <td>${response.data.id}</td>
-                <td><a href="${response.data.species.url}">Details</a></td>
+                <td><a href="./pokemon.html?code=${response.data.id}">Details</a></td>
             </tr>
             `;
         });
