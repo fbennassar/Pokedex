@@ -15,36 +15,84 @@
             <h2 id="name"></h2>
         </div>
         <br>
+        <br>
 
-        <div class="text-center">
-        <div class="card" style="width: 18rem;">
-            <img id="sprite" src="" class="card-img-start" alt="...">
-            <div class="card-body">
-              <p class="card-text">Front</p>
-            </div>
-        </div>
-        </div>
-
-        <div class="text-center">
-            <div class="card" style="width: 18rem;">
-                <img id="backSprite" src="" class="card-img-star" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Back</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="text-center">
+                <div class="card" style="width: 18rem;">
+                  <img id="sprite" src="" class="card-img-start" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Front</p>
+                  </div>
                 </div>
-            </div>
-            </div>
-            
-            <div class="position-relative">
-                <div class="position-absolute top-100 start-50 translate-middle">
-                <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                  <h5 class="card-title">Primary card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+        
+              <div class="text-center">
+                <div class="card" style="width: 18rem;">
+                  <img id="backSprite" src="" class="card-img-star" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Back</p>
+                  </div>
                 </div>
               </div>
             </div>
+        
+            <div class="col-md-6">
+              <div class="card text-bg-primary mb-3" style="max-width: 30rem;">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title">Height</h5>
+                      <p class="card-text" id="height" style="color: black;"></p>
+                    </div>
+                    <div class="col">
+                      <h5 class="card-title">Weight</h5>
+                      <p class="card-text" id="weight" style="color: black;"></p>
+                    </div>
+                    <div class="col">
+                      <h5 class="card-title">Type</h5>
+                      <p class="card-text" id="type" style="color: black;"></p>
+                    </div>
+                    <div class="col">
+                      <h5 class="card-title">Abilities</h5>
+                      <p class="card-text" id="abilities" style="color: black;"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="align-items-end justify-content-center">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample">
+                    Moves
+                  </button>
+                  <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+                      <div class="card card-body" style="width: 300px;">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Move</th>
+                            </tr>
+                          </thead>
+                          <tbody id="moves">
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
+          </div>
+        </div>
+            </div>
+            </div>
+          </div>
+        </div>
+  
+  
+
+            
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
