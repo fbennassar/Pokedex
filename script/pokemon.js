@@ -15,5 +15,5 @@ async function getPokemon() {
 
     document.getElementById('backSprite').src = response.data.sprites.back_default;
 
-
+    // push de mi pc
 }
