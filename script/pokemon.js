@@ -70,5 +70,5 @@ async function getPokemon() {
     });
     
 
-    // push de mi pc
+    
 }
