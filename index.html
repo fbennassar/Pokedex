@@ -13,6 +13,14 @@
     <div class="container">
         <div class="text-center"><h2>Pokedex</h2></div>
         <br>
+        
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search by name or ID..." aria-label="Search" id="search">
+                  <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
+                </form>
+                <button class="btn btn-outline-primary mt-2" type="submit" id="searchButton" onclick="goBack()">Go Back</button>
+                <button type="button" class="btn btn-primary btn-sm" id="previous"><< Previous</button>
+                <button type="button" class="btn btn-primary btn-sm" id="next">Next >></button>
 
         <table class="table table-striped table-hover">
             <thead>
@@ -27,7 +35,7 @@
             </tbody>
         </table>
 
-        <div class="d-grid gap-2 col-6 mx-auto">
+        <div class="d-grid gap-2 col-6 mx-auto" id="buttons">
             <button class="btn btn-primary" type="button" id="previous"><< Previous</button>
             <button class="btn btn-primary" type="button" id="next">Next >></button>
         </div>
