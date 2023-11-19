@@ -109,6 +109,27 @@ function loadLess() {
 
 document.getElementById("previous").addEventListener("click", loadLess);
 
+function loadMore() {
+    offset += 20;
+    limit += 20;
+    getPokemon();
+    window.scrollTo(0, 0);
+}
+
+document.getElementById("next2").addEventListener("click", loadMore);
+
+function loadLess() {
+    if(offset == 0){
+        return;
+    }
+    offset -= 20;
+    limit -= 20;
+    getPokemon();
+}
+
+document.getElementById("previous2").addEventListener("click", loadLess);
+
+
 function goBack() {
     offset = 0;
     limit = 20;

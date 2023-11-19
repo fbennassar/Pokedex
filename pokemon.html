@@ -4,130 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link src="./style/pokemon.css" rel="stylesheet">
+    <link href="./style/pokemon.css" rel="stylesheet">
     <title>Pokedex</title>
 </head>
 <body onload="getPokemon()">
     
-    <div class="container">
-        <div class="text-center">
-            <h2 id="name"></h2>
-        </div>
-        <br>
-        <br>
+  <div class="container"> 
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="text-center">
-                <div class="card" style="width: 18rem;">
-                  <img id="sprite" src="" class="card-img-start" alt="...">
-                  <div class="card-body">
-                    <span class="badge text-bg-success" ><p class="card-text">Front Sprite</p></span>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="text-center" >
-                <div class="card" style="width: 18rem;">
-                  <img id="backSprite" src="" class="card-img-star" alt="...">
-                  <div class="card-body">
-                    <span class="badge text-bg-success" ><p class="card-text">Back Sprite</p></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-            <div class="col-md-6">
-              <div class="card text-bg-primary mb-3" style="max-width: 30rem;">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title">Height</h5>
-                      <p class="card-text" id="height" style="color: black;"></p>
-                    </div>
-                    <div class="col">
-                      <h5 class="card-title">Weight</h5>
-                      <p class="card-text" id="weight" style="color: black;"></p>
-                    </div>
-                    <div class="col">
-                      <h5 class="card-title">Type</h5>
-                      <p class="card-text" id="type" style="color: black;"></p>
-                    </div>
-                    <div class="col">
-                      <h5 class="card-title">Abilities</h5>
-                      <p class="card-text" id="abilities" style="color: black;"></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-                <div class="align-items-end justify-content-center">
-                  <p class="d-inline-flex gap-1">
-                    <button class="btn btn-primary"  type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Locations</button>
-                  </p>
-                  <div class="row">
-                    <div class="col">
-                      <div class="collapse multi-collapse" id="multiCollapseExample2">
-                        <div class="card card-body" id="locations">
-                          <ul id="locationsList">
-
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="container-fluid">
-                      <div class="row">
-                          <div class="col">
-                              <div class="d-flex flex-column vh-100 overflow-hidden">                               
-                                  <div class="row h-100 mb-3 mx-0 overflow-hidden">
-                                      <div class="container-fluid h-100">
-                                          <div class="row h-100">
-                                              <div class="col-9 h-100 p-0 m-0">
-                                                  <div class="card h-100 border rounded bg-white">
-                                                      <div class="card-header"> Moves </div>
-                                                      <div class="card-body p-0 m-0 overflow-hidden">
-                                                          <div class="list-group h-100 list-group-flush rounded-0">
-                                                              <div class="h-100 scrollable overflow-auto"> 
-                                                                <table class="table table-striped table-hover">
-                                                                  <thead>
-                                                                      <tr>
-                                                                          <th scope="col">Name</th>
-                                                                          <th scope="col">Level</th>
-                                                                      </tr>
-                                                                  </thead>
-                                                                  <tbody id="moves">
-                                                                      
-                                                                  </tbody>
-                                                              </div>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  </div>
-                
-            </div>
-          </div>
-        </div>
-            </div>
-            </div>
-          </div>
-        </div>
-  
-  
-
-            
+    <div class="header">
+      <h1 id="name"></h1>
+      <button class="button" id="backPokemon">Back</button>
+      <button class="button" id="pokedex">Pokedex</button>
+      <button class="button" id="nextPokemon">Next</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div class="content">
+
+      <div id="border">
+        
+        <div class="image">
+          <img id="sprite" src="" alt="">
+        </div>
+      
+      </div>
+
+      <div class="sprites">
+
+        <button class="button" id="backSprite">Back</button>
+        <button class="button" id="shinySprite">Shiny</button>
+        <button class="button" id="frontSprite">Front</button>
+      </div>
+
+      <div class="info"> 
+
+        <div class="left-info">
+          <h2>Weight</h2>
+          <p id="weight"></p>
+        </div>
+
+        <div class="height">
+          <h2>Height</h2>
+          <p id="height"></p>
+        </div>
+        
+        
+        <div class="abilities">
+          <h2>Abilities</h2>
+          <ul id="abilities">
+          </ul>
+        </div>
+  
+        <div class="left-info">
+          <h2>Types</h2>
+          <ul id="type">
+          </ul>
+        </div>
+
+        <div class="strong">
+          <h2>Strong Against</h2>
+          <ul id="strong">
+          </ul>
+        </div>
+
+        <div class="weak">
+          <h2>Weak Against</h2>
+          <ul id="weak">
+          </ul>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+    
+  
     <script src="./script/lib/axios.min.js"> </script>
     <script src="./script/pokemon.js"> </script>
 

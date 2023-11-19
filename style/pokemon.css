@@ -1,0 +1,121 @@
+
+
+body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+.header {
+    background-color: #A9A9A9;
+    color: black;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+#name {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#previousPokemon {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+#nextPokemon {
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+}
+
+.content {
+    background-color: #DCDCDC;
+    margin-top: 40px;
+    height: auto;
+    width: 99%;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 100px;
+}
+
+#border {
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%; /* Make the element appear as a circle */
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: 20px;
+    width: 240px; /* Set a fixed width */
+    height: 240px; /* Set a fixed height */
+}
+
+.image {
+    background-color: #A9A9A9;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%; /* Make the element appear as a circle */
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+}
+
+.sprites{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.button{
+    background-color: #A9A9A9;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    width: auto;
+    height: 50px;
+    font-size: 20px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.info {
+    color: black;
+    background-color: #A9A9A9;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 100%; /* Set a fixed width */
+    height: 100%; /* Set a fixed height */
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.left-info {
+    margin-left: 35px;
+}
