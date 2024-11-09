@@ -1,88 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="./style/pokemon.css" rel="stylesheet">
+    <link href="./style/pokemon.css" rel="stylesheet" />
     <title>Pokedex</title>
-</head>
-<body onload="getPokemon()">
-    
-  <div class="container"> 
+  </head>
+  <body onload="getPokemon()">
+    <div class="container">
+      <div class="header">
+        <h1 id="name"></h1>
+        <button class="button" id="backPokemon">Back</button>
+        <button class="button" id="pokedex">Pokedex</button>
+        <button class="button" id="nextPokemon">Next</button>
+      </div>
 
-    <div class="header">
-      <h1 id="name"></h1>
-      <button class="button" id="backPokemon">Back</button>
-      <button class="button" id="pokedex">Pokedex</button>
-      <button class="button" id="nextPokemon">Next</button>
+      <div class="content">
+        <div id="border">
+          <div class="image">
+            <img id="sprite" src="" alt="" />
+          </div>
+        </div>
+
+        <div class="sprites">
+          <button class="button" id="backSprite">Back</button>
+          <button class="button" id="shinySprite">Shiny</button>
+          <button class="button" id="frontSprite">Front</button>
+        </div>
+
+        <div class="info">
+          <div class="left-info">
+            <h2>Weight</h2>
+            <p id="weight"></p>
+          </div>
+
+          <div class="height">
+            <h2>Height</h2>
+            <p id="height"></p>
+          </div>
+
+          <div class="abilities">
+            <h2>Abilities</h2>
+            <ul id="abilities"></ul>
+          </div>
+
+          <div class="left-info">
+            <h2>Types</h2>
+            <ul id="type"></ul>
+          </div>
+
+          <div class="strong">
+            <h2>Strong Against</h2>
+            <ul id="strong"></ul>
+          </div>
+
+          <div class="weak">
+            <h2>Weak Against</h2>
+            <ul id="weak"></ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="content">
-
-      <div id="border">
-        
-        <div class="image">
-          <img id="sprite" src="" alt="">
-        </div>
-      
-      </div>
-
-      <div class="sprites">
-
-        <button class="button" id="backSprite">Back</button>
-        <button class="button" id="shinySprite">Shiny</button>
-        <button class="button" id="frontSprite">Front</button>
-      </div>
-
-      <div class="info"> 
-
-        <div class="left-info">
-          <h2>Weight</h2>
-          <p id="weight"></p>
-        </div>
-
-        <div class="height">
-          <h2>Height</h2>
-          <p id="height"></p>
-        </div>
-        
-        
-        <div class="abilities">
-          <h2>Abilities</h2>
-          <ul id="abilities">
-          </ul>
-        </div>
-  
-        <div class="left-info">
-          <h2>Types</h2>
-          <ul id="type">
-          </ul>
-        </div>
-
-        <div class="strong">
-          <h2>Strong Against</h2>
-          <ul id="strong">
-          </ul>
-        </div>
-
-        <div class="weak">
-          <h2>Weak Against</h2>
-          <ul id="weak">
-          </ul>
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-    
-  
-    <script src="./script/lib/axios.min.js"> </script>
-    <script src="./script/pokemon.js"> </script>
-
-</body>
+    <script src="./script/lib/axios.min.js"></script>
+    <script src="./script/pokemon.js"></script>
+  </body>
 </html>

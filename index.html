@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link src="./style/index.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link src="./style/index.css" rel="stylesheet" />
     <title>Pokedex</title>
-</head>
-<body onload="getPokemon()">
-    
+  </head>
+  <body onload="getPokemon()">
     <div class="container">
-        <div class="text-center"><h2>Pokedex</h2></div>
-        <br>
-        
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search by name or ID..." aria-label="Search" id="search">
-                  <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
-                </form>
-                <button class="btn btn-outline-primary mt-2" type="submit" id="searchButton" onclick="goBack()">Go Back</button>
-                <button type="button" class="btn btn-primary btn-sm" id="previous"><< Previous</button>
-                <button type="button" class="btn btn-primary btn-sm" id="next">Next >></button>
+      <div class="text-center"><h2>Pokedex</h2></div>
+      <br />
 
-        <table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Sprite</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">ID</th>
-                </tr>
-            </thead>
-            <tbody id="bodyTable">
-            </tbody>
-        </table>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search by name or ID..."
+          aria-label="Search"
+          id="search"
+        />
+        <button class="btn btn-outline-success" type="submit" id="searchButton">
+          Search
+        </button>
+      </form>
+      <button
+        class="btn btn-outline-primary mt-2"
+        type="submit"
+        id="searchButton"
+        onclick="goBack()"
+      >
+        Go Back
+      </button>
+      <button type="button" class="btn btn-primary btn-sm" id="previous">
+        << Previous
+      </button>
+      <button type="button" class="btn btn-primary btn-sm" id="next">
+        Next >>
+      </button>
 
-        <div class="d-grid gap-2 col-6 mx-auto" id="buttons">
-            <button class="btn btn-primary" type="button" id="previous2"><< Previous</button>
-            <button class="btn btn-primary" type="button" id="next2">Next >></button>
-        </div>
+      <!-- Template for a table row -->
+      <template id="pokemon-template">
+        <tr>
+          <td><img src="" alt="" /></td>
+          <td class="pokemon-name"></td>
+          <td>
+            <span
+              class="badge rounded-pill text-bg-secondary pokemon-types"
+            ></span>
+          </td>
+          <td class="pokemon-id"></td>
+          <td><a href="" class="pokemon-details">Details</a></td>
+        </tr>
+      </template>
 
+      <div id="loading" style="display: none;">Loading...</div>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Sprite</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">ID</th>
+          </tr>
+        </thead>
+        <tbody id="bodyTable"></tbody>
+      </table>
+
+      <div class="d-grid gap-2 col-6 mx-auto" id="buttons">
+        <button class="btn btn-primary" type="button" id="previous2">
+          << Previous
+        </button>
+        <button class="btn btn-primary" type="button" id="next2">
+          Next >>
+        </button>
+      </div>
     </div>
- 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./script/lib/axios.min.js"> </script>
-    <script src="./script/index.js"> </script>
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/lib/axios.min.js"></script>
+    <script src="./script/index.js"></script>
+  </body>
 </html>
