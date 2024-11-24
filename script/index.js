@@ -1,11 +1,11 @@
 // a refactorizar
 
-var offset = 0;
-var limit = 20;
+let offset = 0;
+let limit = 20;
 
 async function getPokemon() {
-  var promises = [];
-  for (var i = offset + 1; i <= limit; i++) {
+  let promises = [];
+  for (let i = offset + 1; i <= limit; i++) {
     promises.push(axios.get("https://pokeapi.co/api/v2/pokemon/" + i));
   }
 
@@ -22,7 +22,7 @@ async function getPokemon() {
     bodyTable.replaceChildren();
 
     responses.forEach((response) => {
-      var types = "";
+      let types = "";
       response.data.types.forEach((element) => {
         if (types.length > 1) {
           types += " / ";
@@ -33,7 +33,7 @@ async function getPokemon() {
           " ";
       });
 
-      var name =
+      let name =
         response.data.name.charAt(0).toUpperCase() +
         response.data.name.slice(1);
 
@@ -46,7 +46,6 @@ async function getPokemon() {
       clone.querySelector("a").href = `./pokemon.html?code=${response.data.id}`;
 
       bodyTable.appendChild(clone);
-
     });
     // Hide loading indicator
     document.getElementById("loading").style.display = "none";
@@ -80,7 +79,7 @@ function searchPokemon() {
 
   bodyTable.replaceChildren();
 
-  var code = document.getElementById("search").value;
+  let code = document.getElementById("search").value;
   code = code.toLowerCase();
   if (code == "") {
     offset = 0;
@@ -91,7 +90,7 @@ function searchPokemon() {
   axios
     .get("https://pokeapi.co/api/v2/pokemon/" + code)
     .then(function (response) {
-      var types = "";
+      let types = "";
       response.data.types.forEach((element) => {
         if (types.length > 1) {
           types += " / ";
@@ -102,21 +101,21 @@ function searchPokemon() {
           " ";
       });
 
-      var name =
+      let name =
         response.data.name.charAt(0).toUpperCase() +
         response.data.name.slice(1);
 
       bodyTable.innerHTML = "";
 
-        let clone = template.content.cloneNode(true);
-        clone.querySelector("img").src = response.data.sprites.front_default;
-        clone.querySelector("img").alt = response.data.name;
-        clone.querySelector(".pokemon-name").textContent = name;
-        clone.querySelector(".pokemon-types").textContent = types;
-        clone.querySelector(".pokemon-id").textContent = response.data.id;
-        clone.querySelector("a").href = `./pokemon.html?code=${response.data.id}`;
-  
-        bodyTable.appendChild(clone);
+      let clone = template.content.cloneNode(true);
+      clone.querySelector("img").src = response.data.sprites.front_default;
+      clone.querySelector("img").alt = response.data.name;
+      clone.querySelector(".pokemon-name").textContent = name;
+      clone.querySelector(".pokemon-types").textContent = types;
+      clone.querySelector(".pokemon-id").textContent = response.data.id;
+      clone.querySelector("a").href = `./pokemon.html?code=${response.data.id}`;
+
+      bodyTable.appendChild(clone);
     })
     .catch(function (error) {
       document.getElementById("bodyTable").innerHTML =
